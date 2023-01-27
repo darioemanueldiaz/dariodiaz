@@ -1,0 +1,142 @@
+*{
+    box-sizing: border-box;
+    background: rgb(70, 70, 70);
+}
+
+#img_perfil{
+    margin-top: 10px;
+    border-radius: 100px;
+    border: black solid;
+}
+
+/** -------------------------------------------- Reutilizando codigo en imagenes */
+.img_body{
+    margin-top: 10px;
+    border-radius: 100px;
+    border: black solid;
+    position: absolute;
+
+}
+#img_body_left{
+    float: left;
+    margin-left: 10% ;
+}
+
+#img_body_right{
+    float: right;
+    margin-left: 75%;
+}
+
+/** -------------------------------------------- Encabezado */
+.encabezado, .encabezado h1{
+    text-align: center;
+    align-items: center;
+    font-weight: bold;
+    background: whitesmoke;
+}
+
+/** -------------------------------------------- Textos del cuerpo */
+.titulo{
+    color: yellow;
+    font-weight: bold;
+    text-align: center;
+    background: rgb(70, 70, 70);
+    margin: 0px;
+    padding: 0px;
+}
+
+.subtitulo{
+    color: rgb(255, 255, 190);
+    text-align: left;
+    margin-left: 50px;
+}
+
+.aclaracion{
+    color: white;
+    text-align: left;
+    margin-left: 50px;
+}
+.aclaracion2{
+    color: darkgrey;
+    text-align: left;
+    margin-left: 50px;
+}
+
+.dato{
+    color: whitesmoke;
+    text-align: left;
+    margin-left: 50px;
+}
+
+.dato_oculto{
+    color: whitesmoke;
+    margin: 5px 500px 5px 15px;
+    display: none;
+    float: right;
+    padding: 15px;
+    border-style: 3px;
+}
+
+#squaretext{
+    margin-top: 50px;
+}
+
+/** -------------------------------------------- Botones */
+.boton{
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 20px;
+    color: white;
+    padding: 15px;
+    background-color: gray;
+    border-color: black;
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 10px;
+    margin: 5px 15px 5px 450px;
+    cursor: pointer;
+}
+
+.boton:hover {
+    background-color: yellow;
+    color: black;
+}
+
+/** -------------------------------------------- Texto en parrafo */
+
+#text{
+    color: white;
+    text-align: left;
+    margin: 15px 50px 15px 50px;
+}
+
+/** -------------------------------------------- Barra de navegacion de datos */
+ul {
+    list-style-type: none;
+    margin-bottom: 0px;
+    padding: 0px;
+    background: rgb(70, 70, 70);
+    overflow: hidden;
+    object-position: right;
+}
+
+li{
+    float: left;
+}
+
+li a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    border-right: 1px solid yellow;
+}
+
+li a:active{
+    color: yellow;
+}
+
+li a:hover{
+    background-color: black;
+}
