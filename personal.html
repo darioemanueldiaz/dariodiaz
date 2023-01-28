@@ -1,7 +1,6 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,51 +9,52 @@
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-
 </head>
 <body>
+    
+    <div class="contenedor">
 
-    <section class="encabezado">
-        <img id="img_perfil" src="img/perfil_cv.jpg" alt="Homero Simpson" height="200px" width="200px"/> 
-        <h1>Homero Simpson</h1>
-    </section>
-    
-    <nav>
-        <ul>
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="personal.html">PERSONAL INFO</a></li>
-            <li><a href="education.html">EDUCATION</a></li>
-            <li><a href="experience.html">PREVIOUS EXPERIENCE</a></li>
-        </ul>
+        <header class="header">
+            <img class="img_perfil" src="images/perfil_cv.jpg" alt="Homero Simpson" height="200px" width="200px"/> 
+            <h1 class="text_perfil">Homero Simpson</h1>
+        </header>
 
-        <h1 class="titulo">Personal</h1>
-    </div>
-        <img class="img_body" id="img_body_left" src="img/izq.png" alt="img_left">
-        <img class="img_body" id="img_body_right" src="img/der.png" alt="img_right">
-    <div>
-        <button class="boton" id="boton_name">Name</button>
-        <span class="dato_oculto" id="name">Homero Jay Simpson, Sr.</span>
-    </div>
-    
-    <div>
-        <button class="boton" id="boton_date">Date</button>
-        <span class="dato_oculto" id="date">May 12, 1955</span>
-    </div>
-    
-    <div>
-        <button class="boton" id="boton_adress">Adress</button>
-        <span class="dato_oculto" id="adress">742 Evergreen Terrace, Springfield</span>
-    </div>
-    
-    <div>
-        <button class="boton" id="boton_nationality">Nationality</button>
-        <span class="dato_oculto" id="nationality">United State of America</span>
+        <div class="divnav">
+            <nav>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="personal.html">PERSONAL INFO</a></li>
+                    <li><a href="education.html">EDUCATION</a></li>
+                    <li><a href="experience.html">PREVIOUS EXPERIENCE</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <main class="contenido">
+            <h1 class="titulo">My Personal Info</h1>
+                <button class="boton" id="boton_name">Name</button>
+                <span class="dato_oculto" id="name">Homero Jay Simpson, Sr.</span>
+                <br><br>
+                <button class="boton" id="boton_date">Date</button>
+                <span class="dato_oculto" id="date">May 12, 1955</span>
+                <br><br>
+                <button class="boton" id="boton_adress">Adress</button>
+                <span class="dato_oculto" id="adress">742 Evergreen, Springfield</span>
+                <br><br>
+                <button class="boton" id="boton_nationality">Nationality</button>
+                <span class="dato_oculto" id="nationality">United State of America</span>
+        </main>
+
+        <aside class="sidebar">
+            <img class="img_body" src="images/der.png" alt="img_right">
+        </aside>
+
+        <footer class="footer">
+            <h3>Proyecto Integrador | Argentina Programa 4.0 | Dario Emanuel Diaz</h3>
+        </footer>
+
     </div>
 
-    
-    
-    </nav>
-    
-    <script src="js/funciones.js"></script>
+    <script src="js/functions.js"></script>
 </body>
 </html>

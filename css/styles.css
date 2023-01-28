@@ -1,87 +1,111 @@
 *{
-    box-sizing: border-box;
-    background: rgb(70, 70, 70);
+    margin: 0;
+    padding: 0;
 }
 
-#img_perfil{
+body{
+    background: whitesmoke;
+    color: rgb(70 70 70);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+.contenedor{
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, auto);
+
+    grid-template-areas:
+    "header header header"
+    "divnav divnav sidebar"
+    "contenido contenido sidebar"
+    "footer footer footer";
+
+}
+.contenedor > div, 
+.contenedor .header,
+.contenedor .contenido,
+.contenedor .footer {
+    background: rgb(70 70 70);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.contenedor .header {
+    background: rgb(70 70 70);
+    color: white;
+    align-items: center;
+    text-align: center;
+    grid-area: header;
+}
+
+.contenedor > div,
+.contenedor .divnav{
+    padding: 10px 0px 0px 0px;
+}
+
+.contenedor .divnav{
+    grid-area: divnav;
+}
+
+.contenedor .contenido {
+    grid-area: contenido;
+}
+
+.contenedor .sidebar{
+    grid-column: 3 / 4;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px;
+    grid-area: sidebar;
+}
+
+.contenedor .footer{
+    background: black;
+    color: white;
+    grid-area: footer;
+}
+
+/*--------------------------------------------------------------------------------------------- **/
+@media screen and (max-width: 768px) {
+    .contenedor{
+        grid-template-areas:
+        "header header header"
+        "divnav divnav divnav"
+        "contenido contenido contenido"
+        "sidebar sidebar sidebar"
+        "footer footer footer";
+    }
+}
+
+/*--------------------------------------------------------------------------------------------- **/
+.img_perfil{
     margin-top: 10px;
     border-radius: 100px;
     border: black solid;
 }
 
-/** -------------------------------------------- Reutilizando codigo en imagenes */
 .img_body{
     margin-top: 10px;
     border-radius: 100px;
     border: black solid;
-    position: absolute;
+    position: relative;
 
 }
-#img_body_left{
-    float: left;
-    margin-left: 10% ;
-}
 
-#img_body_right{
-    float: right;
-    margin-left: 75%;
-}
-
-/** -------------------------------------------- Encabezado */
-.encabezado, .encabezado h1{
-    text-align: center;
-    align-items: center;
-    font-weight: bold;
-    background: whitesmoke;
-}
-
-/** -------------------------------------------- Textos del cuerpo */
+/*--------------------------------------------------------------------------------------------- **/
 .titulo{
     color: yellow;
     font-weight: bold;
     text-align: center;
-    background: rgb(70, 70, 70);
-    margin: 0px;
-    padding: 0px;
 }
 
-.subtitulo{
-    color: rgb(255, 255, 190);
-    text-align: left;
-    margin-left: 50px;
-}
-
-.aclaracion{
-    color: white;
-    text-align: left;
-    margin-left: 50px;
-}
-.aclaracion2{
-    color: darkgrey;
-    text-align: left;
-    margin-left: 50px;
-}
-
-.dato{
-    color: whitesmoke;
-    text-align: left;
-    margin-left: 50px;
-}
-
-.dato_oculto{
-    color: whitesmoke;
-    margin: 5px 500px 5px 15px;
-    display: none;
-    float: right;
-    padding: 15px;
-    border-style: 3px;
-}
-
-#squaretext{
-    margin-top: 50px;
-}
-
-/** -------------------------------------------- Botones */
+/*--------------------------------------------------------------------------------------------- **/
 .boton{
     text-decoration: none;
     font-weight: 600;
@@ -93,7 +117,6 @@
     border-width: 3px;
     border-style: solid;
     border-radius: 10px;
-    margin: 5px 15px 5px 450px;
     cursor: pointer;
 }
 
@@ -102,22 +125,11 @@
     color: black;
 }
 
-/** -------------------------------------------- Texto en parrafo */
-
-#text{
-    color: white;
-    text-align: left;
-    margin: 15px 50px 15px 50px;
-}
-
-/** -------------------------------------------- Barra de navegacion de datos */
+/*--------------------------------------------------------------------------------------------- **/
 ul {
     list-style-type: none;
-    margin-bottom: 0px;
-    padding: 0px;
-    background: rgb(70, 70, 70);
     overflow: hidden;
-    object-position: right;
+    object-position: center;
 }
 
 li{
@@ -128,15 +140,34 @@ li a{
     display: block;
     color: white;
     text-align: center;
-    padding: 16px;
+    padding: 10px;
     text-decoration: none;
     border-right: 1px solid yellow;
 }
 
 li a:active{
-    color: yellow;
+    color: black;
 }
 
 li a:hover{
-    background-color: black;
+    background: yellow;
+    color: black;
+}
+
+/*--------------------------------------------------------------------------------------------- **/
+.dato{
+    color: whitesmoke;
+    text-align: left;
+}
+
+.aclaracion{
+    color: darkgrey;
+    text-align: left;
+}
+
+.dato_oculto{
+    color: whitesmoke;
+    display: none;
+    float: right;
+    border-style: 3px;
 }
